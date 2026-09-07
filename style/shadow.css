@@ -35,18 +35,6 @@ body {
 
 /* ua defaults for consistency */
 button {
-	appearance: auto;
-	text-rendering: auto;
-	letter-spacing: normal;
-	word-spacing: normal;
-	line-height: normal;
-	text-transform: none;
-	text-indent: 0px;
-	text-shadow: none;
-	display: inline-block;
-	text-align: center;
-	align-items: flex-start;
-	cursor: default;
 	box-sizing: border-box;
 	margin: 0em;
 	padding: 1px 6px;
