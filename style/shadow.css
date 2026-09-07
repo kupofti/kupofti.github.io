@@ -7,9 +7,14 @@
 
 /* theme colours */
 :root {
-	--dark: #292929;
-	--darker: #171717;
-	--lessdark: #383838;
+	--dark: #242522;
+	--darker: #111311;
+	--lessdark: #30342e;
+	--line: #69705e;
+	--muted: #858d78;
+	--amber: #d19a43;
+	--bright: #e2b45b;
+    --brighter: #d1d5c5;
 }
 
 html, body {
@@ -24,13 +29,13 @@ html {
 }
 
 body {
-	height: 100%;
 	background-color: var(--darker);
 	font-family: 'Share Tech Mono';
 	font-weight: 400;
-	font-size: 17px;
-	color: white;
-	padding-left: 10px;
+	font-size: 16px;
+	color: var(--brighter);
+	text-shadow: 0 0 8px rgba(209, 154, 67, 0.12);
+	overflow-x: hidden;
 }
 
 /* ua defaults for consistency */
@@ -52,15 +57,16 @@ body::before {
 	mix-blend-mode: screen;
 }
 
-/*everything else*/
+
+
 a {
 	font-family: 'Share Tech Mono';
-	color: #ccc;
+	color: var(--brighter);
 	text-decoration: none;
 }
 
 a:hover {
-	background-color: var(--lessdark);
+	color: var(--bright);
 	text-decoration: underline;
 }
 
