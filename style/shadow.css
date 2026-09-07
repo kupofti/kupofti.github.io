@@ -64,43 +64,9 @@ a:hover {
 	text-decoration: underline;
 }
 
-input,
-select {
-	font-family: 'Share Tech Mono';
-	color: #b6b7b7;
-	background-color: var(--dark);
-	transition: 300ms;
-}
-
-button {
-	font-family: 'Share Tech Mono';
-	background-color: var(--dark);
-	color: #ccc;
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	cursor: pointer;
-	transition: 300ms;
-	text-shadow: #fff 0 0 0.5rem, rgba(255, 255, 255, 0.2) 0 0 5rem;
-}
-
-button:hover {
-	text-shadow: #fff 0 0 0.5rem, rgba(255, 255, 255, 0.7) 0 0 5rem, slategray 0 0 6rem;
-	background-color: var(--lessdark);
-}
-
-code {
-	background-color: ivory;
-}
-
-input:focus,
-button:focus {
-	outline: white;
-	box-shadow: #fff 0 0 0.5rem, rgba(255, 255, 255, 0.2) 0 0 5rem;
-}
-
 *:focus {
-	outline: none;
+	outline: 1px solid var(--bright);
+	outline-offset: 4px;
 }
 
 *, *::before, *::after {
