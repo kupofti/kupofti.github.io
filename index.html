@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GSPN</title>
+	<meta name="description" content="GhostSpoon's shady private upload list">
+	<meta name="keywords" content="ghostspoon, gspn, upload, list">
+
+	<!-- load service worker comms first -->
+	<script src="/src/comms.js" type="module"></script>
+
+	<link rel="stylesheet" href="/style/shadow.css">
+	<link rel="stylesheet" href="/style/layout.css">
+
+	<script src="./src/page.js" type="module"></script>
+</head>
+<body>
+	<header>
+		<a href="/">HOME</a>
+		<span class="spacer"> / </span>
+		<a href="../">UP</a>
+		<span class="spacer"> / </span>
+		<a href="/list">LIST</a>
+		<span class="spacer"> / </span>
+		<a href="/config">CONFIG</a>
+		<span style="margin-left:auto" id="cachetag"></span>
+	</header>
+	<main></main>
+</body>
+</html>
