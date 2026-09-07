@@ -52,7 +52,16 @@ button {
 	padding: 1px 6px;
 	border-width: 2px;
 	border-style: outset;
-	border-image: initial;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 5;
+	background: repeating-linear-gradient(0deg, rgba(255, 222, 159, 0.025) 0, rgba(255, 222, 159, 0.025) 1px, transparent 1px, transparent 4px);
+	mix-blend-mode: screen;
 }
 
 /*everything else*/
