@@ -1,4 +1,5 @@
 @import url(./shadow.css);
+@import url(./thumbnail-placeholders.css);
 
 body {
 	display: grid;
@@ -161,83 +162,6 @@ h2 {
 	position: absolute;
 	top: 17px;
 	left: 18px;
-}
-
-.thumb-coordinates, .thumb-stamp, .thumb-footer {
-	position: absolute;
-	bottom: 17px;
-	left: 18px;
-	color: var(--muted);
-	line-height: 1.4;
-}
-
-.thumb-shape {
-	position: absolute;
-	width: 145px;
-	height: 145px;
-	top: 38px;
-	left: 50%;
-	border: 1px solid var(--amber);
-	transform: translateX(-50%) rotate(45deg);
-	box-shadow: 0 0 28px rgba(209, 154, 67, 0.12);
-}
-
-.thumb-shape::after {
-	content: "";
-	position: absolute;
-	inset: 23px;
-	border: 1px dotted var(--amber);
-}
-
-.thumb-grid {
-	position: absolute;
-	inset: 0;
-	background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
-	background-size: 29px 29px;
-	opacity: 0.25;
-	transform: perspective(220px) rotateX(45deg) scale(1.5);
-	transform-origin: bottom;
-}
-
-.thumb-stamp {
-	left: auto;
-	right: 18px;
-	border: 1px solid var(--amber);
-	padding: 5px 8px;
-	color: var(--amber);
-}
-
-.thumb-signal {
-	position: absolute;
-	top: 94px;
-	left: 13%;
-	color: var(--bright);
-	font-size: 25px;
-	letter-spacing: 0.2em;
-	text-shadow: 0 0 14px var(--amber);
-	transform: scaleY(2);
-}
-
-.thumb-knob {
-	position: absolute;
-	right: 24px;
-	bottom: 21px;
-	color: var(--amber);
-}
-
-.thumb-box {
-	position: absolute;
-	top: 58px;
-	left: 50%;
-	color: var(--bright);
-	line-height: 1.35;
-	transform: translateX(-50%);
-	text-align: center;
-}
-
-.thumb-footer {
-	left: auto;
-	right: 18px;
 }
 
 .card-copy {
