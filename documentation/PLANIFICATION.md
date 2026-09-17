@@ -1,8 +1,8 @@
 Philosophie: utiliser le moins de libraries externes possible; charger du contenu peu utilisé ou inutile demontre un manque de finesse et ralentit l'expérience utilisateur, sans mentionner la dépendance du fonctionnement sur des tiers partis. Si possible, re-créer des fonctionallités pour prouver sa compétence dans ces domaines.
 
-Données: locales au site
-Animations: css pur, js vanille
-Navigation: multiples pages statiques ou par query/hash params
+Données: locales au site<br>
+Animations: css pur, js vanille<br>
+Navigation: multiples pages statiques ou par query/hash params<br>
 Hébergement: gh pages
 
 Idées d'animations:
