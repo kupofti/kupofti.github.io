@@ -1,0 +1,3 @@
+[submodule "src/cicero"]
+	path = src/cicero
+	url = https://github.com/gspn/Cicero.git
