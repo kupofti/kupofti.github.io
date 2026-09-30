@@ -4,6 +4,9 @@ const router = new Cicero.Router();
 
 router
     .redirect("", "/")
+    .route("/", () => loadPage("home"))
+
+    .route("/projects/:projectId", (params) => loadPage(p.projectId))
 
     .start();
 
