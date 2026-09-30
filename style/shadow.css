@@ -2,7 +2,7 @@
 @font-face {
 	font-family: 'Share Tech Mono';
 	src: url('./share_tech_mono.woff2') format('woff2');
-	font-display: swap;
+	font-display: block;
 }
 
 /* theme colours */
@@ -15,6 +15,10 @@
 	--amber: #d19a43;
 	--bright: #e2b45b;
     --brighter: #d1d5c5;
+}
+
+html {
+	overflow-y: scroll;
 }
 
 html, body {
