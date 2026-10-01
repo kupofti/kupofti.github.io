@@ -14,6 +14,13 @@ Affectés: `index.html`, `src/translationKeys.js`
 
 Traitement: utilisé pour créer le dossier `lang`, modifié `downloadLanguageDictionary` pour une traduction plus facile.
 
+## 2026/10/01
+>Improve the translation key system to be more standard, and add it as a pre-processing step to the page.js page loader. Also implement the loadProjectPage, which is like a normal page loader but it adds the project-specific card to the top, bypassing the pageIndex to use the projects data directly to use that id to get the pages/:projectId page
+
+Affectés: `src/page.js`, `src/translationKeys.js`
+
+Traitement: accepté
+
 # 5 questions de bloc
 
 1. Qu'est-ce que j'ai accompli depuis le dernier bloc?

@@ -4,6 +4,7 @@ const ORIGINALS = new WeakMap();
 
 const clean = (value) => value.replace(/\s+/g, " ").trim();
 const isLanguageText = (value) => /[^\W\d_]/u.test(value);
+const keyFor = (value, attribute) => attribute ? `@${attribute}:${value}` : value;
 
 function sourceValue(node, attribute) {
 	const original = ORIGINALS.get(node);
@@ -23,7 +24,7 @@ function entries(root) {
 		const source = clean(value || "");
 		if (!source || !isLanguageText(source)) return;
 		result.push({
-			key: attribute ? `@${attribute}:${source}` : source,
+			key: keyFor(source, attribute),
 			node,
 			attribute,
 		});
@@ -72,6 +73,13 @@ export function applyTranslations(root, dictionary) {
 	});
 }
 
+export function preprocessTranslations(content, dictionary) {
+	const template = document.createElement("template");
+	template.innerHTML = content;
+	applyTranslations(template.content, dictionary);
+	return template.innerHTML;
+}
+
 export async function loadLanguage(files) {
 	const dictionaries = await Promise.all(files.map(async (file) => (await fetch(file)).json()));
 	return Object.assign({}, ...dictionaries);
@@ -106,6 +114,19 @@ export async function downloadLanguageDictionary(root = document, filename = "en
 	URL.revokeObjectURL(link.href);
 }
 
+export const translationsReady = typeof window === "undefined"
+	? Promise.resolve({})
+	: new Promise(resolve => {
+		if (document.readyState === "loading") {
+			document.addEventListener("DOMContentLoaded", resolve, { once: true });
+		} else {
+			resolve();
+		}
+	}).then(() => initTranslations()).catch(error => {
+		console.error("Unable to initialize translations", error);
+		return {};
+	});
+
 if (typeof window !== "undefined") {
 	window.translationTools = {
 		applyTranslations,
@@ -113,9 +134,6 @@ if (typeof window !== "undefined") {
 		downloadLanguageDictionary,
 		initTranslations,
 		loadLanguage,
+		preprocessTranslations,
 	};
-	const start = () => initTranslations().catch(console.error);
-	document.readyState === "loading"
-		? document.addEventListener("DOMContentLoaded", start)
-		: start();
 }
