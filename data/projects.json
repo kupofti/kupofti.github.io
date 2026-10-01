@@ -1,0 +1,22 @@
+[
+    {
+        "id": "advancetd",
+        "title": "Advance TD",
+        "description": "Strategic tower defense game"
+    },
+    {
+        "id": "mandelbrotexplorer",
+        "title": "Mandelbrot Explorer",
+        "description": "A multithreaded in-browser renderer for the Mandelbrot set with camera controls"
+    },
+    {
+        "id": "mocker",
+        "title": "Mocker",
+        "description": "A fully modelled and rigged \"Mocker\", based on my sketches. Textures drawn by hand."
+    },
+    {
+        "id": "infiltration",
+        "title": "Infiltration",
+        "description": "A short film about infiltrating a border post in some authoritarian country during the Cold War."
+    }
+]
