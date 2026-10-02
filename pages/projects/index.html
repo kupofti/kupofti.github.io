@@ -1,0 +1,20 @@
+<section>
+    <h1>PROJECTS</h1>
+</section>
+
+<section>
+    <div class="project-grid">
+    </div>
+    <script type="module">
+        import { projectCard } from "/src/components/projectCard.js";
+        import { projectDataFor, projects } from "/src/projectLoader.js";
+        import { preprocessTranslations, translationsReady } from "/src/translationKeys.js";
+
+        console.log(projectDataFor("advancetd"))
+
+        document.querySelector(".project-grid").innerHTML = preprocessTranslations(
+            projects.map(project => projectCard(project)).join("\n"), 
+            await translationsReady
+        );
+    </script>
+</section>

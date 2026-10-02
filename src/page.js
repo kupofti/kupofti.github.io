@@ -70,7 +70,7 @@ const router = new Cicero.Router()
     .redirect("", "/")
     .route("/", () => loadPage("home"))
 
-    .route("/projects/",)
+    .route("/projects/", () => loadPage("projects"))
     .route("/projects/:projectId", (params) => loadProjectPage(params.projectId))
 
     .start();

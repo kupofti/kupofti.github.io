@@ -2,7 +2,8 @@
     {
         "id": "advancetd",
         "title": "Advance TD",
-        "description": "Strategic tower defense game"
+        "description": "Strategic tower defense game",
+        "hasPage": true
     },
     {
         "id": "mandelbrotexplorer",
