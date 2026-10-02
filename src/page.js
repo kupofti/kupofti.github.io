@@ -66,13 +66,40 @@ const loadProjectPage = pageLoader(
     };
 });
 
+const loadHomeSection = sectionId => loadPage("home").then(() => {
+    setTimeout(
+        () => document.getElementById(sectionId)?.scrollIntoView(),
+        200
+    );
+});
+
 const router = new Cicero.Router()
     .redirect("", "/")
     .route("/", () => loadPage("home"))
+    .route("about", () => loadHomeSection("about"))
+    .route("contact", () => loadHomeSection("contact"))
 
     .route("/projects/", () => loadPage("projects"))
     .route("/projects/:projectId", (params) => loadProjectPage(params.projectId))
 
     .start();
+
+document.addEventListener("click", event => {
+    const link = event.target.closest('a[href^="/#"]');
+    if (!link) return;
+
+    const sectionId = new URL(link.href).hash.slice(1);
+    if (!["about", "contact"].includes(sectionId)) return;
+
+    event.preventDefault();
+    history.pushState({ path: sectionId }, "", link.href);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView();
+    } else {
+        loadHomeSection(sectionId);
+    }
+});
 
 window.router = router;
