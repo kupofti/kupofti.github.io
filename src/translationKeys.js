@@ -1,10 +1,27 @@
 const DEFAULT_LANGUAGE = "en";
 const ATTRIBUTES = ["title", "aria-label", "placeholder"];
 const ORIGINALS = new WeakMap();
+const KEY_HINT_LENGTH = 32;
 
 const clean = (value) => value.replace(/\s+/g, " ").trim();
 const isLanguageText = (value) => /[^\W\d_]/u.test(value);
-const keyFor = (value, attribute) => attribute ? `@${attribute}:${value}` : value;
+
+function hash(value) {
+	let result = 0x811c9dc5;
+	for (let index = 0; index < value.length; index++) {
+		result ^= value.charCodeAt(index);
+		result = Math.imul(result, 0x01000193);
+	}
+	return (result >>> 0).toString(16).padStart(8, "0");
+}
+
+function keyFor(value, attribute) {
+	const hint = value.length > KEY_HINT_LENGTH
+		? `${value.slice(0, KEY_HINT_LENGTH).trimEnd()}…`
+		: value;
+	const prefix = attribute ? `@${attribute}:` : "";
+	return `${prefix}${hint}~${hash(value)}`;
+}
 
 function sourceValue(node, attribute) {
 	const original = ORIGINALS.get(node);

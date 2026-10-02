@@ -21,6 +21,10 @@ Affectés: `src/page.js`, `src/translationKeys.js`
 
 Traitement: accepté
 
+>change the translation key system so that it uses, instead of full content as keys, truncated content as a hint with a hash of the full content at the end, significantly shortening the key side of lang files and saving the wasted space for long paragraphs
+
+Affectés: `lang/`, `translationKeys.js`
+
 # 5 questions de bloc
 
 1. Qu'est-ce que j'ai accompli depuis le dernier bloc?

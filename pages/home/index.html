@@ -77,11 +77,12 @@
     <script type="module">
         import { projectCard } from "/src/components/projectCard.js";
         import { projectDataFor, projects } from "/src/projectLoader.js";
+        import { preprocessTranslations, translationsReady } from "/src/translationKeys.js";
 
         console.log(projectDataFor("advancetd"))
 
-        document.querySelector(".project-grid").innerHTML = projects.slice(0, 4)
-            .map(project => projectCard(project)).join("\n");
+        document.querySelector(".project-grid").innerHTML = preprocessTranslations(projects.slice(0, 4)
+            .map(project => projectCard(project)).join("\n"), await translationsReady);
     </script>
 </section>
 
