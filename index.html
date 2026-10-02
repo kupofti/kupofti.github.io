@@ -18,15 +18,15 @@
 		<a class="brand" href="/">WB<span class="muted">_</span></a>
 		<nav aria-label="Primary navigation">
 			<a href="/projects/">PROJECTS</a>
-			<span class="spacer"> / </span>
+			<span class="spacer" aria-hidden="true"> / </span>
 			<a href="#about">ABOUT</a>
-			<span class="spacer"> / </span>
+			<span class="spacer" aria-hidden="true"> / </span>
 			<a href="#contact">CONTACT</a>
 		</nav>
 		<span class="status">
-			<a href="javascript:" onclick="localStorage.language='en';location.reload()">EN</a>
-			<span class="spacer">/</span>
-			<a href="javascript:" onclick="localStorage.language='fr';location.reload()">FR</a>
+			<button class="language-button" type="button" onclick="localStorage.language='en';location.reload()" aria-label="Switch to English">EN</button>
+			<span class="spacer" aria-hidden="true">/</span>
+			<button class="language-button" type="button" onclick="localStorage.language='fr';location.reload()" aria-label="Passer au français">FR</button>
 		</span>
 	</header>
 	<main>

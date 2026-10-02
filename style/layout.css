@@ -38,6 +38,21 @@ header nav {
 	letter-spacing: 0.08em;
 }
 
+.language-button {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--brighter);
+	font: inherit;
+	letter-spacing: inherit;
+	cursor: pointer;
+}
+
+.language-button:hover {
+	color: var(--bright);
+	text-decoration: underline;
+}
+
 .status-dot {
 	display: inline-block;
 	width: 7px;
