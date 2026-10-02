@@ -233,6 +233,44 @@ h3 {
 	line-height: 1.55;
 }
 
+.tools-section {
+	margin-top: 150px;
+}
+
+.tools-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 70px;
+	padding: 22px 0 0 74px;
+	border-left: 1px solid var(--line);
+}
+
+.tools-heading {
+	margin: 0 0 16px;
+	color: var(--amber);
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+}
+
+.tools-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 24px;
+	margin: 0;
+	padding: 0;
+	color: #a5ac9d;
+	font-size: 14px;
+	line-height: 1.45;
+	list-style: none;
+}
+
+.tools-list li::before {
+	margin-right: 8px;
+	color: var(--line);
+	content: "/";
+}
+
 .muted {
 	color: var(--muted);
 }
@@ -293,8 +331,13 @@ footer .muted {
 		gap: 20px;
 		padding-left: 24px;
 	}
-	.about-section, footer {
+	.about-section, .tools-section, footer {
 		margin-top: 100px;
+	}
+	.tools-grid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+		padding-left: 24px;
 	}
 	footer {
 		align-items: flex-start;
