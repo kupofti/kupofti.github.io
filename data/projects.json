@@ -3,21 +3,26 @@
         "id": "advancetd",
         "title": "Advance TD",
         "description": "Strategic tower defense game",
+        "link": "https://quaduction.github.io/advancetd/",
         "hasPage": true
     },
     {
         "id": "mandelbrotexplorer",
         "title": "Mandelbrot Explorer",
-        "description": "A multithreaded in-browser renderer for the Mandelbrot set with camera controls"
+        "date": "2024-11-24",
+        "description": "A multithreaded in-browser renderer for the Mandelbrot set with camera controls",
+        "link": "https://superwibr.github.io/mandelbrot/index.html"
     },
     {
         "id": "mocker",
         "title": "Mocker",
+        "date": "2025-12-11",
         "description": "A fully modelled and rigged \"Mocker\", based on my sketches. Textures drawn by hand."
     },
     {
         "id": "infiltration",
         "title": "Infiltration",
+        "date": "2025-11-30",
         "description": "A short film about infiltrating a border post in some authoritarian country during the Cold War."
     }
 ]
