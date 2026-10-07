@@ -4,4 +4,5 @@ export const projectCard = ({ id, title, description, hasPage }) => template
     .replaceAll("%id%", id)
     .replaceAll("%title%", title)
     .replace("%description%", description)
-    .replace(hasPage ? "%pagelink%" : /%pagelink%.+/m, "");
+    .replace("%pagelink%", hasPage ? `/projects/${id}` : "")
+    .replace(hasPage ? "%pagelinklabel%" : /%pagelinklabel%.+/m, "");
