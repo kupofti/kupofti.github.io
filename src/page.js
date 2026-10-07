@@ -61,7 +61,7 @@ const loadProjectPage = pageLoader(
         .catch(error => `Sorry m8: ${error.message}`);
 
     return {
-        content: `${projectCard(project)}${content}`,
+        content: `<h1>${project.title}</h1><div class="page-card-container">${projectCard(project, true)}</div>${content}`,
         data: project,
     };
 });

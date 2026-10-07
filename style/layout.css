@@ -286,6 +286,10 @@ h3 {
 	content: "/";
 }
 
+.page-card-container {
+	margin-bottom: 2.5em;
+}
+
 .muted {
 	color: var(--muted);
 }
