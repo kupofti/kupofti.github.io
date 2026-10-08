@@ -112,6 +112,7 @@ h1 {
 }
 
 .section-heading {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: 16px;
@@ -224,7 +225,7 @@ h3 {
 	font-size: 12px;
 }
 
-.about-section {
+.section {
 	margin-top: 150px;
 }
 
@@ -248,8 +249,28 @@ h3 {
 	line-height: 1.55;
 }
 
-.tools-section {
+.section, .blog-section {
 	margin-top: 150px;
+}
+
+.blog-section, .blog-section-body {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.blog-section-body {
+	margin-top: 2ch;
+	max-width: 80ch;
+}
+
+.blog-section-body img {
+	max-height: 60vh;
+	max-width: 100%;
+}
+
+.blog-section-body a {
+	text-decoration: underline;
 }
 
 .tools-grid {
@@ -350,7 +371,7 @@ footer .muted {
 		gap: 20px;
 		padding-left: 24px;
 	}
-	.about-section, .tools-section, footer {
+	.section, .blog-section, footer {
 		margin-top: 100px;
 	}
 	.tools-grid {
