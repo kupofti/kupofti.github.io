@@ -2,7 +2,7 @@
     {
         "id": "advancetd",
         "title": "Advance TD",
-        "description": "Strategic tower defense game",
+        "description": "Strategic tower defense game made in Godot.",
         "link": "https://quaduction.github.io/advancetd/",
         "hasPage": true
     },
@@ -10,7 +10,7 @@
         "id": "mandelbrotexplorer",
         "title": "Mandelbrot Explorer",
         "date": "2024-11-24",
-        "description": "A multithreaded in-browser renderer for the Mandelbrot set with camera controls",
+        "description": "A multithreaded in-browser renderer for the Mandelbrot set with camera controls.",
         "link": "https://superwibr.github.io/mandelbrot/index.html"
     },
     {
