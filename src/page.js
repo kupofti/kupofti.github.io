@@ -16,10 +16,20 @@ const pageLoader = (pathProvider, preprocess = content => content) => contentPro
     main.innerHTML = preprocess(content, translations);
     document.title = data.title;
 
-    main.querySelectorAll("[src]").forEach(sourced => sourced.src = new URL(
-        sourced.getAttribute("src"),
-        new URL(path, location)
-    ));
+    const urlReRelative = (attr, sel) => main.querySelectorAll(sel || `[${attr}]`)
+        .forEach(el => {
+            const url = new URL(
+                el.getAttribute(attr),
+                new URL(path, location)
+            );
+
+            el[attr] = url.origin == location.origin
+                ? url.pathname
+                : url.href;
+        });
+
+    urlReRelative("src");
+    urlReRelative("href");
 
     main.querySelectorAll("script").forEach(Cicero.Router.replaceAndRunScript);
 };
