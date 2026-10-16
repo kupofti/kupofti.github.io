@@ -1,5 +1,6 @@
 import Cicero from "./cicero/src/Cicero.js";
 import { projectCard } from "./components/projectCard.js";
+import { projectDetails } from "./components/projectDetails.js";
 import { projectDataFor } from "./projectLoader.js";
 import { preprocessTranslations, translationsReady } from "./translationKeys.js";
 
@@ -71,7 +72,7 @@ const loadProjectPage = pageLoader(
         .catch(error => `Sorry m8: ${error.message}`);
 
     return {
-        content: `<h1>${project.title}</h1><div class="page-card-container">${projectCard(project, true)}</div>${content}`,
+        content: `<h1>${project.title}</h1><div class="page-card-container">${projectCard(project, true)}</div>${projectDetails(project.details)}${content}`,
         data: project,
     };
 });

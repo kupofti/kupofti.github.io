@@ -4,7 +4,17 @@
         "title": "Advance TD",
         "description": "Strategic tower defense game made in Godot.",
         "link": "https://quaduction.github.io/advancetd/",
-        "hasPage": true
+        "hasPage": true,
+
+        "details": {
+            "Context": "Academic",
+            "Class": "Interactivité Ludique",
+            "Work": "Team",
+            "Teammates": "Sean Larry Driesen",
+            "Roles": "Lead programmer, engine designer",
+            "Programs and techniques used": "Godot, GDScript, Pixelorama",
+            "Category": "Video game"
+        }
     },
     {
         "id": "mandelbrotexplorer",
@@ -18,7 +28,16 @@
         "title": "Mocker",
         "date": "2025-12-11",
         "description": "A fully modelled and rigged \"Mocker\", based on my sketches. Textures drawn by hand.",
-        "hasPage": true
+        "hasPage": true,
+
+        "details": {
+            "Context": "Academic",
+            "Class": "Modélisation 3D",
+            "Work": "Individual",
+            "Roles": "(everything?)",
+            "Programs and techniques used": "Maya, Krita, pencil on paper drawing",
+            "Category": "3D model, rig, and scene"
+        }
     },
     {
         "id": "infiltration",

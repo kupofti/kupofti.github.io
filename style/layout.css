@@ -351,6 +351,46 @@ h3 {
 	margin-bottom: 2.5em;
 }
 
+.project-details {
+	max-width: 680px;
+	margin: 0 auto 2.5em;
+	padding: 22px 24px 24px;
+	border: 1px solid var(--line);
+	background: rgba(36, 37, 34, 0.45);
+}
+
+.project-details h2 {
+	margin-bottom: 22px;
+	color: var(--amber);
+}
+
+.project-details dl {
+	display: grid;
+	gap: 12px 24px;
+	margin: 0;
+}
+
+.project-details dl > div {
+	display: grid;
+	grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.3fr);
+	gap: 24px;
+	align-items: baseline;
+}
+
+.project-details dt {
+	color: var(--amber);
+	font-size: 12px;
+	letter-spacing: 0.08em;
+	text-align: right;
+}
+
+.project-details dd {
+	margin: 0;
+	color: #a5ac9d;
+	font-size: 14px;
+	line-height: 1.45;
+}
+
 .muted {
 	color: var(--muted);
 }
@@ -418,6 +458,10 @@ footer .muted {
 		grid-template-columns: 1fr;
 		gap: 28px;
 		padding-left: 24px;
+	}
+	.project-details dl > div {
+		grid-template-columns: minmax(110px, 0.7fr) minmax(0, 1.3fr);
+		gap: 16px;
 	}
 	footer {
 		align-items: flex-start;
