@@ -43,6 +43,18 @@
         "id": "infiltration",
         "title": "Infiltration",
         "date": "2025-11-30",
-        "description": "A short film about infiltrating a border post in some authoritarian country during the Cold War."
+        "description": "A short film about infiltrating a border post in some authoritarian country during the Cold War.",
+
+        "hasPage": true,
+
+        "details": {
+            "Context": "Academic",
+            "Class": "Vidéo 2",
+            "Work": "Team",
+            "Teammates": "Sean Larry Driesen, Philippe La Brèque, Rada Ben Maiz, Chaima Chahed",
+            "Roles": "Actor, artistic director, coloriser, editor",
+            "Programs and techniques used": "Stop-motion, Dragonframe, DaVinci Resolve",
+            "Category": "Short film"
+        }
     }
 ]
