@@ -8,6 +8,6 @@ export const projectCard = ({ id, title, description, link, hasPage, date }, ded
     .replace("%target%", (dedicated || !hasPage) && link ? "target=\"_blank\"" : "")
     .replace("%linkhint%", (!hasPage || dedicated) ? "OPEN PROJECT " : "READ MORE ")
     .replace("%linkicon%", (!hasPage || dedicated) ? "\u21d7" : "-&gt;")
-    .replace(hasPage || link ? "%linkhintel%" : /%linkhintel%.+/m, "")
+    .replace((dedicated ? link : hasPage || link) ? "%linkhintel%" : /%linkhintel%.+/m, "")
     .replace("%date%", date ? (date.split("-").join(" / ")) : "")
     .replace("%year%", date ? (date.split("-")[0]) : "");

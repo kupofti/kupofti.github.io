@@ -19,8 +19,12 @@ const pageLoader = (pathProvider, preprocess = content => content) => contentPro
 
     const urlReRelative = (attr, sel) => main.querySelectorAll(sel || `[${attr}]`)
         .forEach(el => {
+            const attrValue = el.getAttribute(attr);
+
+            if (attrValue == "") return;
+
             const url = new URL(
-                el.getAttribute(attr),
+                attrValue,
                 new URL(path, location)
             );
 
